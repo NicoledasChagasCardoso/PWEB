@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador Kanban</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Planejamento de Estudos</h1>
+    </header>
+    <main>
+        <div class="toolbar">
+            <input type="text" id="search-input" placeholder="Pesquisar tarefas...">
+            <select id="filter-select">
+                <option value="all">Todas</option>
+                <option value="low">Prioridade Baixa</option>
+                <option value="medium">Prioridade Média</option>
+                <option value="high">Prioridade Alta</option>
+            </select>
+            <button id="add-task-btn">Adicionar Tarefa</button>
+        </div>
+        <div class="kanban-board">
+            <div class="kanban-column" id="column-1" data-status="Coluna1">
+                <h2>Conteúdo para estudar</h2>
+                <div class="tasks"></div>
+            </div>
+            <div class="kanban-column" id="column-2" data-status="Coluna2">
+                <h2>Em Progresso</h2>
+                <div class="tasks"></div>
+            </div>
+            <div class="kanban-column" id="column-3" data-status="Coluna3">
+                <h2>Concluído</h2>
+                <div class="tasks"></div>
+            </div>
+        </div>
+    </main>
+    <div id="task-modal" class="modal hide">
+        <form id="task-form">
+            <h2>Adicionar Tarefa</h2>
+            <label for="task-title">Título</label>
+            <input type="text" id="task-title" required>
+            <label for="task-desc">Descrição</label>
+            <textarea id="task-desc" required></textarea>
+            <label for="task-priority">Prioridade</label>
+            <select id="task-priority">
+                <option value="low">Baixa</option>
+                <option value="medium">Média</option>
+                <option value="high">Alta</option>
+            </select>
+            <label for="task-due-date">Data de Vencimento</label>
+            <input type="date" id="task-due-date" required>
+            <div class="form-buttons">
+                <button type="submit">Salvar</button>
+                <button type="button" id="cancel-task-btn">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

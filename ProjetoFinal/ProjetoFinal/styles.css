@@ -1,0 +1,179 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f7f3e9; /* Fundo bege suave */
+    color: #4a3f35; /* Texto marrom escuro */
+}
+
+header {
+    background-color: #a67c52; /* Marrom claro */
+    color: #fefae0; /* Bege claro */
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #d9c6a5; /* Bege médio */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.toolbar input, .toolbar select, .toolbar button {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #4a3f35; /* Marrom escuro */
+    font-size: 1rem;
+}
+
+button {
+    background-color: #a67c52;
+    color: #fefae0;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #80572b;
+}
+
+.kanban-board {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.kanban-column {
+    flex: 1;
+    background-color: #fefae0; /* Fundo bege claro */
+    border: 1px solid #d9c6a5;
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tasks {
+    min-height: 200px;
+    border: 2px dashed #d9c6a5;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.task {
+    background: #ffffff;
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 1px solid #d9c6a5;
+    border-radius: 5px;
+    cursor: grab;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.task:active {
+    transform: scale(1.05);
+}
+
+.task.low { border-left: 5px solid #4caf50; /* Verde */ }
+.task.medium { border-left: 5px solid #ffeb3b; /* Amarelo */ }
+.task.high { border-left: 5px solid #f44336; /* Vermelho */ }
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.modal form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #4a3f35; /* Marrom escuro */
+}
+
+.modal form input,
+.modal form select,
+.modal form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #d9c6a5;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #4a3f35;
+    background-color: #f7f3e9;
+}
+
+.modal form button {
+    width: 100%;
+    padding: 0.7rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #a67c52;
+    color: #fefae0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.modal form button:hover {
+    background-color: #80572b;
+}
+
+.hide {
+    display: none;
+}
+.task .task-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+
+.task .task-buttons button {
+    padding: 0.3rem 0.6rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #fff;
+    background-color: #a67c52;
+    transition: background-color 0.3s;
+}
+
+.task .task-buttons button:hover {
+    background-color: #80572b;
+}
+
+.task .task-buttons .delete-btn {
+    background-color: #f44336;
+}
+
+.task .task-buttons .delete-btn:hover {
+    background-color: #c62828;
+}
+
+.task .task-buttons .edit-btn {
+    background-color: #4caf50;
+}
+
+.task .task-buttons .edit-btn:hover {
+    background-color: #388e3c;
+}
